@@ -1,7 +1,7 @@
 /*
     this file implements the linear search algorithm
 
-    complexity : O(n^n)
+    complexity : O(n)
 
 
     author : kq.
