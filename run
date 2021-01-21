@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# abstract the compiler details -> give you just a run interface withtout any comipled binary
+
+run() { 
+    fileNamePath=$1
+    binaryFile="tmp.out"
+    
+    if [[ -f ./$binaryFile ]];then
+        rm -rf ./$binaryFile
+    fi
+
+    query=`gcc -o $binaryFile $fileNamePath`;
+    ./$binaryFile
+    
+    rm -rf $binaryFile
+
+
+}
+
+run $1 
+
+
